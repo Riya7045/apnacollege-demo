@@ -1,0 +1,21 @@
+Insertion into a Circular Singly Linked List
+Algorithm Overview:
+
+Circular Property: In a circular linked list, the last node always points back to the first node (the head), making the list circular.
+Insertion at the End: This algorithm inserts a new node at the end of the list while maintaining the circular nature.
+Steps:
+
+Create a new node:
+
+Dynamically allocate memory for a new node.
+Assign the data value to the node.
+Set the new node’s next pointer to the head (since it will eventually point to the first node in a circular list).
+Handle the empty list case:
+
+If the list is empty (i.e., *head == NULL), the new node becomes the head.
+Since it’s the only node, its next should point to itself, ensuring the circular nature.
+Handle the non-empty list case:
+
+If the list already has nodes, traverse the list until you reach the last node (i.e., the node whose next is pointing to the head).
+Set the last node’s next to the new node.
+Set the new node’s next to the head, keeping the circular property intact.
